@@ -9,7 +9,7 @@ const Prodcutmanage = () => {
     const navigate = useNavigate();
 
     const showproduct=()=>{
-        fetch(`http://localhost:4000/showproductapi`)
+        fetch(`https://deploy-crud-y5fr.vercel.app/showproductapi`)
         .then((res) => res.json())
         .then((pr) => {
             setManageProduct(pr);
@@ -31,7 +31,7 @@ const Prodcutmanage = () => {
         e.preventDefault();
         console.log("pid",uId)
         try{
-           const response=await axios.post("http://localhost:4000/deleteproduct",{uId})
+           const response=await axios.post("https://deploy-crud-y5fr.vercel.app/deleteproduct",{uId})
            console.log(response.data.message);
            alert(response.data.message);
            showproduct()
