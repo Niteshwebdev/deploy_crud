@@ -17,7 +17,7 @@ const Showproduct = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await fetch(`https://deploy-crud-y5fr.vercel.app//showproductapi`);
+      const response = await fetch(`https://deploy-crud-y5fr.vercel.app/showproductapi`);
       const data = await response.json();
       setProducts(data);
       setLoading(false);
