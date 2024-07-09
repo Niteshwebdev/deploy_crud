@@ -36,7 +36,7 @@ const Addproduct = () => {
     formData.append("pimage", product.pimage);
 
     try {
-      const res = await axios.post(`http://localhost:4000/addproductapi`, formData, {
+      const res = await axios.post(`https://deploy-crud-y5fr.vercel.app/addproductapi`, formData, {
         headers: {
           "Content-Type": "multipart/form-data"
         }
